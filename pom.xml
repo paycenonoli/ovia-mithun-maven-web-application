@@ -21,8 +21,8 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://3.89.65.126:9000/</sonar.host.url>
-		<sonar.login>squ_3f56af9c17a6d21049997da6e557fdc91c7c5ee3</sonar.login>
+		<sonar.host.url>http://54.235.236.236:9000/</sonar.host.url>
+		<sonar.login>squ_8fb7c554009d1907d2817eb21a14b4def99c3d3b</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>ovia-releases</name>
-	      <url>http://54.174.97.215:8089/ovia-mithun/repository/ovia-releases/</url>
+	      <url>http://54.165.214.36:8089/ovia-mithun/repository/ovia-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>ovia-snapshots</name>
-	      <url>http://54.174.97.215:8089/ovia-mithun/repository/ovia-snapshots/</url>
+	      <url>http://54.165.214.36:8089/ovia-mithun/repository/ovia-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
