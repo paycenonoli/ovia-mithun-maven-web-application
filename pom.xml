@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>ovia-releases</name>
-	      <url>http://54.165.214.36:8089/ovia-mithun/repository/ovia-releases/</url>
+	      <url>http://44.203.130.203:8089/ovia-mithun/repository/ovia-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>ovia-snapshots</name>
-	      <url>http://54.165.214.36:8089/ovia-mithun/repository/ovia-snapshots/</url>
+	      <url>http://44.203.130.203:8089/ovia-mithun/repository/ovia-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
