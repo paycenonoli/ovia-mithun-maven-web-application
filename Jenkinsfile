@@ -1,6 +1,10 @@
 node{
 def mavenHome = tool name: "Maven"
     
+echo "Node name is: " ${env.NODE_NAME}
+echo "Job name is: " ${JOB_NAME}
+echo "Build number is: " ${BUILD_NUMBER}
+    
 //Checkout stage
 stage('Code checkout'){
 git branch: 'ovia-dev', credentialsId: '6366fa87-5931-4d1d-b6c4-dc1ad3581978', url: 'https://github.com/paycenonoli/ovia-mithun-maven-web-application.git'
