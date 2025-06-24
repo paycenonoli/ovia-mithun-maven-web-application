@@ -4,6 +4,8 @@ def mavenHome = tool name: "Maven"
 echo "Node name is: ${env.NODE_NAME}"
 echo "Job name is:  ${env.JOB_NAME}"
 echo "Build number is: ${env.BUILD_NUMBER}"
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
     
 //Checkout stage
 stage('Code checkout'){
