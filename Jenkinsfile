@@ -1,9 +1,9 @@
 node{
 def mavenHome = tool name: "Maven"
     
-echo "Node name is: " ${env.NODE_NAME}
-echo "Job name is: " ${env.JOB_NAME}
-echo "Build number is: " ${env.BUILD_NUMBER}
+echo "Node name is: ${env.NODE_NAME}"
+echo "Job name is:  ${env.JOB_NAME}"
+echo "Build number is: ${env.BUILD_NUMBER}"
     
 //Checkout stage
 stage('Code checkout'){
