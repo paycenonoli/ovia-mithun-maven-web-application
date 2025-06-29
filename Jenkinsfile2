@@ -1,1 +1,15 @@
+pipeline{
+  agent any
+  stages{
+    stage('Source code checkout'){
+      steps{
+        
+      }
+    
+    }
+  }
 
+
+
+
+}
