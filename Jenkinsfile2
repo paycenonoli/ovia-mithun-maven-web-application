@@ -7,8 +7,12 @@ pipeline{
   tools{
     maven "Maven"
   }
+
   options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
+  }
+  options {
+  timestamps
   }
 
   stages{
