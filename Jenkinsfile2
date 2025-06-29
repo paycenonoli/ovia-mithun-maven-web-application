@@ -4,7 +4,10 @@ pipeline{
   tools{
     maven "Maven"
   }
+
+  options{
   properties([pipelineTriggers([githubPush()])])
+  }
   stages{
 
     //Pull code from the SCM
