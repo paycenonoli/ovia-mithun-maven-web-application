@@ -29,7 +29,7 @@ pipeline{
       }
     }
 
-    // Run the statis code analysis
+    // Run the static code analysis
     stage('SonarQube analysis'){
       steps{
         sh 'mvn sonar:sonar'
