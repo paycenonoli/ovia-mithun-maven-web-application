@@ -1,9 +1,20 @@
 pipeline{
   agent any
+
+  tools{
+    maven "Maven"
+  }
+
   stages{
     stage('Source code checkout'){
       steps{
         git branch: 'ovia-dev', credentialsId: '6366fa87-5931-4d1d-b6c4-dc1ad3581978', url: 'https://github.com/paycenonoli/ovia-mithun-maven-web-application.git'
+      }
+    }
+
+    stage('Maven build'){
+      steps{
+        sh 'mvn clean package'
       }
     }
   }
