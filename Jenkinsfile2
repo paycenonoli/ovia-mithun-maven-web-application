@@ -30,6 +30,11 @@ pipeline{
       }
     }
 
+    stage('Deploy to Tomcat server'){
+      steps{
+        sh 'mvn deploy'
+      }
+    }
 
   }
 
