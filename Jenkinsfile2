@@ -1,3 +1,5 @@
+
+properties([pipelineTriggers([githubPush()])])
 pipeline{
   agent any
 
@@ -5,10 +7,6 @@ pipeline{
     maven "Maven"
   }
 
-  options{
-  timestamps()
-  properties([pipelineTriggers([githubPush()])])
-  }
   stages{
 
     //Pull code from the SCM
