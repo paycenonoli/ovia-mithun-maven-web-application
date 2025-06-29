@@ -6,30 +6,36 @@ pipeline{
   }
 
   stages{
+
+    //Pull code from the SCM
     stage('Source code checkout'){
       steps{
         git branch: 'ovia-dev', credentialsId: '6366fa87-5931-4d1d-b6c4-dc1ad3581978', url: 'https://github.com/paycenonoli/ovia-mithun-maven-web-application.git'
       }
     }
 
+    // Build the source code into artifacts
     stage('Maven build'){
       steps{
         sh 'mvn clean package'
       }
     }
 
+    //Run the statis code analysis
     stage('SonarQube analysis'){
       steps{
         sh 'mvn sonar:sonar'
       }
     }
 
+    //Upload the aartifact to an artifact repository
     stage('Upload to Nexus artifactory manager'){
       steps{
         sh 'mvn deploy'
       }
     }
 
+    //Deploy the application server environment
     stage('DeployToTomcatServer'){
       steps{
       sshagent(['883f69d8-eb13-463e-9b5e-52fe6a787b5a']) {
