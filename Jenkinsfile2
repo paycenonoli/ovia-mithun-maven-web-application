@@ -10,11 +10,9 @@ pipeline{
 
   options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-  }
-  options {
   timestamps
   }
-
+  
   stages{
 
     // Pull code from the SCM
