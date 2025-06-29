@@ -37,7 +37,7 @@ pipeline{
       }
     }
 
-    //Deploy the application server environment
+    //Deploy the application to server environment
     stage('DeployToTomcatServer'){
       steps{
       sshagent(['883f69d8-eb13-463e-9b5e-52fe6a787b5a']) {
