@@ -24,6 +24,13 @@ pipeline{
       }
     }
 
+    stage('Upload to Nexus artifactory manager'){
+      steps{
+        sh 'mvn deploy'
+      }
+    }
+
+
   }
 
 
