@@ -51,5 +51,16 @@ pipeline{
         }
       }
     }
-}
+  }
+  post {
+        success {
+            slackSend channel: 'ovia-slack-notify', message: "✅ *Pipeline SUCCESS* : `${env.JOB_NAME}` #${env.BUILD_NUMBER}\n<${env.BUILD_URL}|View build>"
+        }
+        failure {
+            slackSend channel: 'ovia-slack-notify', message: "❌ *Pipeline FAILURE* : `${env.JOB_NAME}` #${env.BUILD_NUMBER}\n<${env.BUILD_URL}|View build>"
+        }
+        always {
+            echo 'Pipeline finished.'
+        }
+  }  
 }
